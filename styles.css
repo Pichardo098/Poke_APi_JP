@@ -12,6 +12,8 @@
     --font-family: 'Libre Baskerville', serif;
     --title-weight: 700;
     --letter-weight: 400;
+    --yellow-color: #FFCC01;
+    --second-background:  #0C5496;
 }
 
 
@@ -41,16 +43,36 @@ nav{
 }
 main{
     width: 100%;
+    min-height: 60vh;
+    position: relative;
+}
+.up{
+    position: fixed ;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    margin: 5px;
+    background-color: var(--second-background);
+    color: white;
+    opacity: .6;
+}
+.up:hover{
+    opacity: 1;
+}
+.inputs{
+    max-width: 800px;
+    margin: 0 auto;
     display: grid;
     gap: 1rem;
-}
-.grid--container {
-    display: grid;
+    padding: 0 1rem;
 }
 .app__search {
     font-weight: var(--title-weight);
-    width: 80%;
-    padding: 1rem;
+    width: 100%;
+    padding: 1rem 0 ;
     outline: none;
     border: none;
     border-radius: 1rem;
@@ -60,13 +82,12 @@ main{
 }
 .app__buttons {
     display: grid;
-    width: 85%;
+    width: 100%;
     grid-template-columns: 1fr 1fr .5fr;
     column-gap: 1rem;
     margin: 0;
     padding: 0;
     justify-self: center;
-  
 }
 .button {
     font-weight: var(--letter-weight);
@@ -88,16 +109,69 @@ main{
 }
 
 /*------- Result of API ----------*/
-.app__container {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+
+.app{
+    width: 100%;
+    display: grid;
     gap: 1rem;
 }
+.app__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
+    gap: 1rem;
+    padding: 1rem 1rem;
+    justify-content: center;
+   
+}
 .app__item {
-    padding: 1rem;
-    background-color: #f0f0f0;
+    background-color: var(--second-background);
     border-radius: 10px;
     text-align: center;
 }
+.app__only-card{
+    min-width: 300px;
+    margin: 0 auto;
+    background-color: var(--second-background);
+    border-radius: 10px;
+    text-align: center;
+}
+.app__item:hover{
+    transition: all .5s;
+    transform: scale(1.02);
+    box-shadow: 0 2px 10px black;
+}
+
+.app__item-name{
+    font-family: var(--font-family);
+    color: white;
+    padding: .5rem;
+}
 .app__item--img {
     width: 150px;
+}
+
+footer{
+    position: absolute;
+    display: grid;
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding: 1rem 0;
+    font-size: 15px;
+    font-family: var(--font-family);
+    background:linear-gradient(to bottom, var(--blue-color), var(--second-background));
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: .5rem;
+    font-size: 20px;
+}
+
+a{
+    color: white;
 }

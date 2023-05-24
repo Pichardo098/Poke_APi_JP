@@ -6,30 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeApi</title>
     <link rel="stylesheet" href="/styles.css">
+    <script src="https://kit.fontawesome.com/2c7a1f0771.js" crossorigin="anonymous"></script>
 
     <script src="/JS/main.js" defer></script>
 </head>
 <body>
+    
+    <a href="#" class="up">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <header>
         <nav>
             Pokédex
         </nav>
         <img id="img_logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png">
     </header>
-    <main>
-        <input type="text" class="app__search" placeholder="Buscar por nombre o id">
-
-        <div class="app__buttons grid--container">
-            <button class="button button--prev">Atrás</button>
-            <button class="button button--next">Adelante</button>
-            <button class="button button--initial">Iniciar</button>
-        </div>
-        <div class="app__container grid"></div>
-
-        <!--
-            Minuto 01:49:24
-        -->
+    <main >
+        <section class="inputs">
+            <input type="text" class="app__search" placeholder="Buscar por nombre o id">
+    
+            <div class="app__buttons grid--container">
+                <button class="button button--prev">Atrás</button>
+                <button class="button button--next">Adelante</button>
+                <button class="button button--initial">Iniciar</button>
+            </div>
+        </section>
+        <section class="app">
+            <div class="app__container grid"></div>
+        </section>
     </main>
+    <footer id="contacto">
+        <h2 class="title_contact">
+            Contacto
+        </h2>
+            <ul class="contact_info">
+                <li>
+                    <a href="https://github.com/Pichardo098?tab=repositories" target="_blank" rel="noopener" id="git">
+                        <i class="fab fa-github" aria-hidden="true"></i> 
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener" id="linkdn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i> 
+                    </a>
+                </li>
+            </ul>
+            <p>
+                Página y diseño por Jesús Pichardo.
+            </p>
+    </footer>
 
     
 </body>
